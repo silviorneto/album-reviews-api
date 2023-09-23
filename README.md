@@ -1,4 +1,4 @@
-# Album Review API
+# Album Review API (WIP)
 ## Descrição
 Esse projeto visa servir como um local onde é possível registrar álbuns musicais e estabelecer uma nota.
 
