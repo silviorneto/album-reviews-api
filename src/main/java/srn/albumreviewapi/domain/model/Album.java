@@ -14,10 +14,20 @@ public class Album {
     @Column(name="release_year")
     private Integer year;
 
+    @Column(name="album_rating")
+    private Integer rating;
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "artist_id")
     private Artist artist;
+
+    public Integer getRating() {
+        return rating;
+    }
+
+    public void setRating(Integer rating) {
+        this.rating = rating;
+    }
 
     public Long getId() {
         return id;

@@ -69,6 +69,7 @@ public class AlbumController {
                         albumToCreate.id(),
                         albumToCreate.title(),
                         albumToCreate.year(),
+                        albumToCreate.rating(),
                         new ArtistDto(artist)
                 ).toModel()
         );
@@ -95,6 +96,7 @@ public class AlbumController {
                         albumToUpdate.id(),
                         albumToUpdate.title(),
                         albumToUpdate.year(),
+                        albumToUpdate.rating(),
                         new ArtistDto(artist)
                 ).toModel()
         );

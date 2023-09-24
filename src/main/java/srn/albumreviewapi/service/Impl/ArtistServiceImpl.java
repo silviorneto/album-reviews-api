@@ -41,7 +41,7 @@ public class ArtistServiceImpl implements ArtistService {
         ofNullable(artist.getName()).orElseThrow(() -> new NullFieldException("Name"));
 
         if (this.artistRepository.existsByName(artist.getName())) {
-            throw new BusinessException("This artist already exists");
+            throw new IllegalArgumentException("This artist already exists");
         }
 
         return this.artistRepository.save(artist);

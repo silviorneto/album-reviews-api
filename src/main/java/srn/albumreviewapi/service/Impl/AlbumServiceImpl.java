@@ -43,9 +43,10 @@ public class AlbumServiceImpl implements AlbumService {
         ofNullable(albumToCreate.getArtist()).orElseThrow(() -> new NullFieldException("Artist"));
         ofNullable(albumToCreate.getTitle()).orElseThrow(() ->  new NullFieldException("Title"));
         ofNullable(albumToCreate.getYear()).orElseThrow(() ->  new NullFieldException("Year"));
+        ofNullable(albumToCreate.getRating()).orElseThrow(() ->  new NullFieldException("Rating"));
 
         if (albumRepo.existsByArtistAndTitle(albumToCreate.getArtist(), albumToCreate.getTitle())) {
-            throw new BusinessException("This album already exists");
+            throw new IllegalArgumentException("This album already exists");
         }
 
         return albumRepo.save(albumToCreate);
@@ -59,6 +60,7 @@ public class AlbumServiceImpl implements AlbumService {
         albumFounded.setArtist(album.getArtist());
         albumFounded.setTitle(album.getTitle());
         albumFounded.setYear(album.getYear());
+        albumFounded.setRating(album.getRating());
 
         return this.albumRepo.save(albumFounded);
     }

@@ -4,6 +4,7 @@ public record UpdateAlbumDto (
         Long id,
         String title,
         Integer year,
+        Integer rating,
         Long artist_id
 ) {
 }
