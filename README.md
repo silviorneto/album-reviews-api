@@ -48,5 +48,5 @@ Exemplo de requisição:
 Rode a aplicação e acesse o endpoint /swagger-ui/index.html. Por exemplo, se estiver rodando localmente, acesse através do http://localhost:8080/swagger-ui/index.html:
 
 ## Melhorias futuras
-Teste unitários
-Melhorias na Documentação
+- Teste unitários
+- Melhorias na Documentação
